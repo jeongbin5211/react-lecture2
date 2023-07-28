@@ -1,17 +1,20 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router ,Routes, Route } from 'react-router-dom';
 
 import Components from './components';
 import Prop from './props/prop02';
 import State from './state';
 import Effect from './effect';
+import Todo from './views/Practice';
+
 
 function App() {
   return (
     <>
-    <State name='jeongbin' />
+    <State name='jeongbin'/>
     <Effect />
+    <Todo />
     {/* 
         라우터 설치
         npm install react-router-dom
@@ -23,7 +26,7 @@ function App() {
     */}
       <Routes>
         <Route path="/components" element={<Components />} />
-        <Route path="/props" element={<Prop name="jiyoon" />} />
+        <Route path="/props" element={<Prop name="jeongbin" />} />
       </Routes>
     </>
   );

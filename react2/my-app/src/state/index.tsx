@@ -6,9 +6,9 @@ import React, { useState } from 'react'
 
 // State 정의방법
 // useState라는 Hook을 사용하여 state를 정의하고 관리
-// : state 변수와 해당 변수를 갱신할 수 있는 함수, 두 개의 요소를 가진 배열을 반환합니다.
+// : state 변수와 해당 변수를 갱신할 수 있는 함수(setState), 두 개의 요소를 가진 배열을 반환합니다.
 
-// const [state, setState] = React.useState<type>(기본값initialState);
+// const [state, setState] = React.useState<type>(초기값initialState);
 
 // state: 현재 state 값을 나타냄
 // setState: 위 state를 갱신하는 함수, 이 함수를 호출하여 state를 갱신하면, 전달된 새로운 값으로 state가 업데이트
@@ -21,23 +21,22 @@ interface GreetingProps {
 
 // State의 타입
 interface CounterState {
-    count1: number;
+    count: number;
 }
 // State 사용 예시
-const Index: React.FC<GreetingProps> = ({ name }) => {
-    const [count, setCount] = useState<CounterState>({count1 : 0});
+const Index: React.FC<GreetingProps> = ({name}) => {
+    const [count, setCount] = useState<CounterState>({count : 0})
 
     const incrementCount = () => {
-        setCount({count1: count.count1 + 1});
+        setCount({ count: count.count + 1});
     };
-
-  return (
-    <div>
-        <p>Hello, {name}</p>
-        <p>Count: {count.count1}</p>
-        <button onClick={incrementCount}>Increment</button>
-    </div>
-  )
+    return (
+        <div>
+            <p>Hello, {name}</p>
+            <p>Count: {count.count}</p>
+            <button onClick={incrementCount}>Increment</button>
+        </div>
+    )
 }
 
 export default Index

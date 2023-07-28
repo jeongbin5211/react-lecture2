@@ -6,3 +6,8 @@ App.tsx
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 라우터 사용을 위해서는 최상위 컴포넌트에서 라우터 설정을 진행해야 함.
+
+라우트를 여러개 사용 시 반드시 Routes 안에 정의 해야 함
+Router, Routes, Route
+path속성: URL경로 지정
+element속성: 컴포넌트를 지정합니다.

@@ -5,13 +5,16 @@ import React from 'react'
 // props는 properties의 줄임말이며 컴포넌트에서 부모 컴포넌트로부터 받는 데이터
 
 //! Props 타입 정의
+
 type MyComponentProps = {
     name: string,
     age: number,
-    isActive: boolean;
+    isActive: boolean,
 }
 
-const prop01: React.FC<MyComponentProps> = ({ name, age, isActive }) => {
+
+
+const prop01: React.FC<MyComponentProps> = ({name, age, isActive}) => {
   return (
     <>
         <div>{name}</div>
@@ -22,3 +25,23 @@ const prop01: React.FC<MyComponentProps> = ({ name, age, isActive }) => {
 }
 
 export default prop01
+
+
+
+// type MyComponentProps = {
+//     name: string,
+//     age: number,
+//     isActive: boolean;
+// }
+
+// const prop01: React.FC<MyComponentProps> = ({ name, age, isActive }) => {
+//   return (
+//     <>
+//         <div>{name}</div>
+//         <div>{age}</div>
+//         <div>{isActive ? "Active" : "Inactive"}</div>
+//     </>
+//   )
+// }
+
+// export default prop01

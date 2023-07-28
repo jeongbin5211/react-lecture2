@@ -1,0 +1,5 @@
+1. One of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object
+
+- 해결방법
+npm install --save-dev @babel/plugin-proposal-private-property-in-object --legacy-peer-deps
