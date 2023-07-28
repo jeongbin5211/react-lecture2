@@ -1,0 +1,10 @@
+react document 주소
+https://www.typescriptlang.org/ko/docs/handbook/react.html
+
+create react app -> get started -> 원하는 코드 복사
+
+타입스크립트 리액트를 만들때
+npx create-react-app my-app --template typescript
+
+my-app 디렉토리로 이동해서 branch를 main으로 변경 후 npm run start하기
+

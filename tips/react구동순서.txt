@@ -1,0 +1,1 @@
+App.tsx -> index.tsx(root에 렌더시킴) -> public/index.html <div id="root"></div>

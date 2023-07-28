@@ -1,0 +1,8 @@
+라우터 설치( 둘 다 설치)
+npm install react-router-dom
+npm install --save-dev @types/react-router-dom
+
+App.tsx
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+
+라우터 사용을 위해서는 최상위 컴포넌트에서 라우터 설정을 진행해야 함.
