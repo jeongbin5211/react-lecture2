@@ -13,6 +13,8 @@ type Props = {
 // props를 사용하는 자식 컴포넌트를 정의
 const Welcome: React.FC<Props> = (props: Props) => {
     return <h1>Hello, {props.name}</h1>;
+    // props내부의 값을 조회할 때 마다 props.을 입력
+    // 이를 비구조화 할당
 }
 
 

@@ -7,6 +7,12 @@ import Prop from './props/prop02';
 import State from './state';
 import Effect from './effect';
 import Todo from './views/Practice';
+import Hello from './props/hello';
+import Wrapper from './props/Wrapper';
+import Input from './views/Input';
+import InputSample2 from './views/Input/InputSample';
+import ArrayRender from './views/ArrayRendering/UserList';
+import Array from './views/Array/Execute';
 
 
 function App() {
@@ -26,7 +32,12 @@ function App() {
     */}
       <Routes>
         <Route path="/components" element={<Components />} />
+        <Route path='/hello' element={<Wrapper><Hello color='blue' name='jeong bin' /></Wrapper>} />
+        <Route path='/array' element={<Array />} />
         <Route path="/props" element={<Prop name="jeongbin" />} />
+        <Route path='/input' element={<Input />} />
+        <Route path='/input2' element={<InputSample2 />} />
+        {/* <Route path='/arrayRendering' element={<ArrayRender />} /> */}
       </Routes>
     </>
   );

@@ -20,21 +20,27 @@ interface GreetingProps {
 }
 
 // State의 타입
-interface CounterState {
-    count: number;
-}
+// interface CounterState {
+//     count: number;
+// }
 // State 사용 예시
-const Index: React.FC<GreetingProps> = ({name}) => {
-    const [count, setCount] = useState<CounterState>({count : 0})
+const Index: React.FC<GreetingProps> = () => {
+    const [count, setCount] = useState<number>(0)
 
     const incrementCount = () => {
-        setCount({ count: count.count + 1});
+        setCount( prevCount => prevCount + 1);
     };
+
+    const decrementCount = () => {
+        setCount( prevCount => prevCount - 1);
+    }
+
     return (
         <div>
-            <p>Hello, {name}</p>
-            <p>Count: {count.count}</p>
+            {/* <p>Hello, {name}</p> */}
+            <p>Count: {count}</p>
             <button onClick={incrementCount}>Increment</button>
+            <button onClick={decrementCount}>Decrement</button>
         </div>
     )
 }
