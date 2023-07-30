@@ -14,8 +14,10 @@ const CreateUser:React.FC<CreateUserProps> = ({username, email, onChange, onCrea
         <input type="text" name='username' placeholder='회원이름' value={username} onChange={onChange} />
         <input type="text" name='email' placeholder='이메일' value={email} onChange={onChange} />
         <button onClick={onCreate}>등록</button>
+        
     </div>
   )
 }
 
-export default CreateUser
+// export default CreateUser
+export default React.memo(CreateUser)
