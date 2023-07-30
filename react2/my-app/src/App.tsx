@@ -13,9 +13,21 @@ import Input from './views/Input';
 import InputSample2 from './views/Input/InputSample';
 import ArrayRender from './views/ArrayRendering/UserList';
 import Array from './views/Array/Execute';
+import Greeting from './views/Greeting/Greeting';
+import Counter from './views/Counter';
+import MyForm from './views/MyForm';
+
 
 
 function App() {
+
+  const onClick = () => {
+    console.log("클릭 동작 실행 성공");
+  }
+
+  const onSubmit = (form: {name: string, description: string}) => {
+    console.log(form);
+  }
   return (
     <>
     <State name='jeongbin'/>
@@ -37,6 +49,9 @@ function App() {
         <Route path="/props" element={<Prop name="jeongbin" />} />
         <Route path='/input' element={<Input />} />
         <Route path='/input2' element={<InputSample2 />} />
+        <Route path='/greeting' element={<Greeting name='Jeongbin' onClick={onClick} />} />
+        <Route path='/counter' element={<Counter />} />
+        <Route path='/form' element={<MyForm onSubmit={onSubmit}/>} />
         {/* <Route path='/arrayRendering' element={<ArrayRender />} /> */}
       </Routes>
     </>
