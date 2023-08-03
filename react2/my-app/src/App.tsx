@@ -16,6 +16,10 @@ import Array from './views/Array/Execute';
 import Greeting from './views/Greeting/Greeting';
 import Counter from './views/Counter';
 import MyForm from './views/MyForm';
+import CustomHooks from './hooks';
+import CustomHooksPractice from './hooks/Practice';
+import ContextApi from './contextAPI';
+import ContextApiLogIn from './contextAPI/Practice';
 
 
 
@@ -50,6 +54,10 @@ function App() {
         <Route path='/input' element={<Input />} />
         <Route path='/input2' element={<InputSample2 />} />
         <Route path='/greeting' element={<Greeting name='Jeongbin' onClick={onClick} />} />
+        <Route path='/customHooks' element={<CustomHooks/>} />
+        <Route path='/customHooksPractice' element={<CustomHooksPractice/>} />
+        <Route path='/contextApi' element={<ContextApi/>} />
+        <Route path='/contextApiLogIn' element={<ContextApiLogIn/>} />
         <Route path='/counter' element={<Counter />} />
         <Route path='/form' element={<MyForm onSubmit={onSubmit}/>} />
         {/* <Route path='/arrayRendering' element={<ArrayRender />} /> */}
