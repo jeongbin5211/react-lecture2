@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 //! Axios 라이브러리를 이용한 API요청 보내기
@@ -23,8 +24,24 @@ export default function PostListAxios() {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
-    1 21
-  })
+    axios
+      .get<Post[]>('https://jsonplaceholder.typicode.com/posts')
+      .then((response) => {
+        setPosts(response.data);
+      });
+    // 반환되는 Promise를 처리하기 위해 .then을 사용
+    // 응답에서 데이터를 추출하여 setPosts함수를 사용해 posts 상태변수를 업데이트
+  });
 
-  return <div>PostListAxios</div>;
+  return (
+    <div>
+      {/* posts 상태변수를 map() 사용해서 각각의 변수에 값이 전달되도록 작성 */}
+      {posts.map((post) => (
+        <div key={post.id}>
+          <h2>{post.title}</h2>
+          <p>{post.body}</p>
+        </div>
+      ))}
+    </div>
+  );
 }

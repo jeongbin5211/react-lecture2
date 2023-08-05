@@ -23,6 +23,8 @@ import ContextApiLogIn from './contextAPI/Practice';
 import StyledComponents from './styledComponents';
 import StyledComponents2 from './styledComponents/practice';
 import FetchAPI from './restAPI/PostList';
+import AxiosAPI from './restAPI/PostListAxios';
+import AsyncAPI from './restAPI/PostListAsync';
 
 function App() {
   const onClick = () => {
@@ -73,6 +75,8 @@ function App() {
         <Route path="/styledComponents" element={<StyledComponents />} />
         <Route path="/styledComponents2" element={<StyledComponents2 />} />
         <Route path="/fetchAPI" element={<FetchAPI />} />
+        <Route path="/axiosAPI" element={<AxiosAPI />} />
+        <Route path="/asyncAPI" element={<AsyncAPI />} />
         {/* <Route path='/arrayRendering' element={<ArrayRender />} /> */}
       </Routes>
     </>
