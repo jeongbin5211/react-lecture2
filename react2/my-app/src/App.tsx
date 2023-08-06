@@ -25,6 +25,9 @@ import StyledComponents2 from './styledComponents/practice';
 import FetchAPI from './restAPI/PostList';
 import AxiosAPI from './restAPI/PostListAxios';
 import AsyncAPI from './restAPI/PostListAsync';
+import Zustand from './zustand';
+import ZustandId from './zustand/views';
+import ZustandCheck from './zustand/views/check';
 
 function App() {
   const onClick = () => {
@@ -48,6 +51,7 @@ function App() {
         path속성: URL경로 지정
         element속성: 컴포넌트를 지정합니다.
     */}
+
       <Routes>
         <Route path="/components" element={<Components />} />
         <Route
@@ -77,6 +81,9 @@ function App() {
         <Route path="/fetchAPI" element={<FetchAPI />} />
         <Route path="/axiosAPI" element={<AxiosAPI />} />
         <Route path="/asyncAPI" element={<AsyncAPI />} />
+        <Route path="/zustand" element={<Zustand />} />
+        <Route path="/zustandId" element={<ZustandId />} />
+        <Route path="/zustandCheck" element={<ZustandCheck />} />
         {/* <Route path='/arrayRendering' element={<ArrayRender />} /> */}
       </Routes>
     </>
